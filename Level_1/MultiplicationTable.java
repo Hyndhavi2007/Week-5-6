@@ -1,8 +1,10 @@
 package Level_1;
 import java.util.Scanner;
+
 public class MultiplicationTable {
-    public static void main(String[]args){
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         System.out.print("Enter a number: ");
         int number = scanner.nextInt();
 
@@ -12,7 +14,6 @@ public class MultiplicationTable {
             table[i - 1] = number * i;
         }
 
-        // Displaying the table
         for (int i = 1; i <= 10; i++) {
             System.out.println(number + " * " + i + " = " + table[i - 1]);
         }
