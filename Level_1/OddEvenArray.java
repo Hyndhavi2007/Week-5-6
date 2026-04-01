@@ -1,0 +1,33 @@
+package Level_1;
+import java.util.Scanner;
+public class OddEvenArray {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a natural number: ");
+        int number = sc.nextInt();
+        if (number <= 0) {
+            System.out.println("Invalid input!");
+            return;
+        }
+        int[] odd = new int[(number + 1) / 2];
+        int[] even = new int[number / 2];
+        int oddIndex = 0, evenIndex = 0;
+        for (int i = 1; i <= number; i++) {
+            if (i % 2 == 0) {
+                even[evenIndex++] = i;
+            } else {
+                odd[oddIndex++] = i;
+            }
+        }
+        System.out.println("Odd numbers:");
+        for (int i = 0; i < oddIndex; i++) {
+            System.out.print(odd[i] + " ");
+        }
+        System.out.println();
+        System.out.println("Even numbers:");
+        for (int i = 0; i < evenIndex; i++) {
+            System.out.print(even[i] + " ");
+        }
+        sc.close();
+    }
+}
